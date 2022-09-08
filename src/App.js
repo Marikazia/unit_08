@@ -1,8 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
+
+	// constructor (props) {
+	// 	super();
+	// 	console.log(props);
+	// 	// this.state = {
+	// 	// 	s1: props.data.p1
+	// 	// }
+	// 	// this.s2 = 201;
+	// 	// console.log(this.state.s1);
+	// 	// console.log(this.s2);
+	// };
 
 	const h1 = React.createElement('h1', {}, 'unit_08')
 	const h2 = React.createElement('h2', {}, 'header 2')
@@ -18,6 +29,22 @@ function App() {
 		className : 'text-grey'
 	}, p1, p2 )
 
+	// const [currVal, setSameVal] = useState('');
+	// const gotSameVal = event => {
+	// 	setSameVal(event.target.value);
+	// }
+
+	// const Comp = React.createElement(
+	// 	input,
+	// 	{
+	// 		ref: bbbbbb
+	// 	}
+	// );
+
+	// buttonLi = () => {
+	// 	console.log(currVal);
+	// 	console.log(gotSameVal);
+	// };
 
   return (
 		<>
@@ -28,7 +55,7 @@ function App() {
 			{div}
 			{input}
 
-			
+
 		</>
 	);
 }
