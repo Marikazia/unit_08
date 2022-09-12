@@ -46,6 +46,39 @@ function App() {
 	// 	console.log(gotSameVal);
 	// };
 
+	function Comp2 () {
+
+		const [comments, setComments] = useState([]);
+		let myRef = React.createRef(); 
+		
+		
+		let addComment = () => {
+			if (!myRef.current.value) return
+			setComments([...comments, myRef.current.value]);
+			myRef.current.value = '';
+		}
+
+		return (
+
+			<div>
+				<input ref={myRef}/><br/>
+				<button onClick={addComment}>Add comment</button>
+
+				<ul>
+					{comments.map(
+						(item) => <li key={item}> {item} </li>
+					)}
+
+				</ul>
+
+		</div>
+		)
+	}
+
+	
+
+
+
   return (
 		<>
 
@@ -54,7 +87,14 @@ function App() {
 			{p}
 			{div}
 			{input}
+			<Comp2/>
+			{/* <div>
+				<ul>
+					{this.state}
 
+				</ul>
+
+			</div> */}
 
 		</>
 	);
